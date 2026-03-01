@@ -1,0 +1,43 @@
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(var(--card));
+  color: hsl(var(--card-foreground));
+  border-radius: var(--radius);
+  border: 1px solid hsl(var(--border));
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+.chatBoxHeight {
+  height: var(--chat-height, 600px);
+}
+
+.scrollAreaWrapper {
+  flex: 1;
+  overflow: hidden;
+}
+
+.messageRow {
+  display: flex;
+  gap: 0.75rem;
+  min-height: var(--msg-min-height, 0px);
+}
+
+.sidebarResizer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  cursor: col-resize;
+  z-index: 50;
+  transition: background-color 0.2s;
+}
+
+.sidebarResizer:hover {
+  background-color: hsl(var(--primary) / 0.2);
+}
+
+.hidden {
+  display: none;
+}
